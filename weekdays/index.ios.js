@@ -5,6 +5,17 @@ import React, {
   Text,
   View
 } from 'react-native';
+import DayItem from './src/day-item';
+
+const DAYS = [
+              'Sunday',
+              'Monday',
+              'Tuesday',
+              'Wednesday',
+              'Thursday',
+              'Friday',
+              'Saturday'
+             ]
 
 // MainScreen
 class weekdays extends Component {
@@ -14,6 +25,7 @@ class weekdays extends Component {
         <Text>
             Days of the Week:
         </Text>
+        <DayItem />
       </View>
     )
   }
@@ -23,8 +35,8 @@ class weekdays extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
+    justifyContent: 'center', // Move heigh wise
+    alignItems: 'center' // Move width
   }
 })
 
